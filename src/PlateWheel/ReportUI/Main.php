@@ -49,18 +49,16 @@ class Main extends PluginBase {
 					$p->sendMessage("Reportttttt Reportttt\nName: " . $data[0] . "\n Reason: " . $data[1] . "\n Reporter: " . $player->getName() . "\n Ban Ban?");
 				}
 			}
-			// $webhook = new Webhook("https://discord.com/api/webhooks/874904463930953738/xB52UezssKODX4hJVLUUtSTMgDMNc3ZcPp0P-vCK91jCSU08FEvm8QsWEy7n0zZX_b22");
-			// $msg = new Message();
-			// $embed = new Embed();
-			// $embed->setTitle("New report uwuwuwuwuwu");
-			// $embed->addField("Name", $data[0]);
-			// $embed->addField("Reason", $data[1]);
-			// $embed->addField("Reporter", $player->getName());
-			// $embed->setFooter("Ban?");
-			// $msg->addEmbed($embed);
-			// $webhook->send($msg);
-
-			$webhook = new Webhook("my webhook link");
+			 $webhook = new Webhook("https://discord.com/api/webhooks/874904463930953738/xB52UezssKODX4hJVLUUtSTMgDMNc3ZcPp0P-vCK91jCSU08FEvm8QsWEy7n0zZX_b22");
+			 $msg = new Message();
+			 $embed = new Embed();
+			 $embed->setTitle("New report uwuwuwuwuwu");
+			 $embed->addField("Name", $data[0]);
+			 $embed->addField("Reason", $data[1]);
+			 $embed->addField("Reporter", $player->getName());
+			 $embed->setFooter("Ban?");
+			 $msg->addEmbed($embed);
+			 $webhook->send($msg);
             $msg = new Message();
             $embed = new Embed();
             $embed->setTitle("New report has been sent");
