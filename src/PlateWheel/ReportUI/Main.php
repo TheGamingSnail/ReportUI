@@ -49,7 +49,6 @@ class Main extends PluginBase {
 					$p->sendMessage("Reportttttt Reportttt\nName: " . $data[0] . "\n Reason: " . $data[1] . "\n Reporter: " . $player->getName() . "\n Ban Ban?");
 				}
 			}
-			 $webhook = new Webhook("https://discord.com/api/webhooks/876598099429187584/wkKXKbe2io90sGUYpdIPZebpec9qvWfpCm16XAUWXJWeYvp3bwtOl8cNRbnCaWEf1_lW");
 			 $msg = new Message();
 			 $embed = new Embed();
 			 $embed->setTitle("New report uwuwuwuwuwu");
@@ -57,6 +56,9 @@ class Main extends PluginBase {
 			 $embed->addField("Reason", $data[1]);
 			 $embed->addField("Reporter", $player->getName());
 			 $embed->setFooter("Ban?");
+			 $msg->addEmbed($embed);
+			 $webhook->send($msg);
+			 $webhook = new Webhook("https://discord.com/api/webhooks/876598099429187584/wkKXKbe2io90sGUYpdIPZebpec9qvWfpCm16XAUWXJWeYvp3bwtOl8cNRbnCaWEf1_lW");
 			 $msg->addEmbed($embed);
 			 $webhook->send($msg);
 		});
