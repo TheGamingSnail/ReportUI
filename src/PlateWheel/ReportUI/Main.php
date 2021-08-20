@@ -59,26 +59,6 @@ class Main extends PluginBase {
 			 $embed->setFooter("Ban?");
 			 $msg->addEmbed($embed);
 			 $webhook->send($msg);
-            $msg = new Message();
-            $embed = new Embed();
-            $embed->setTitle("New report has been sent");
-            $embed->addField("Name:", $data[0]);
-            $embed->addField("Reason:", $data[1]);
-            $embed->addField("Reporter:", $player->getName());
-            $embed->setFooter("Punish?");
-            $msg->addEmbed($embed);
-            $webhook->send($msg);
-
-			$webhook = new Webhook("my webhook link");
-            $msg = new Message();
-            $embed = new Embed();
-            $embed->setTitle("New report has been sent");
-            $embed->addField("Name:", $data[0]);
-            $embed->addField("Reason:", $data[1]);
-            $embed->addField("Reporter:", $player->getName());
-            $embed->setFooter("Punish?");
-            $msg->addEmbed($embed);
-            $webhook->send($msg);
 		});
 		$form->setTitle("ReportUI");
 		$form->addInput("Type a player name you want to report", "Eg: Plaet");
